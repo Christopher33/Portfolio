@@ -1,6 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap');
-/* font-family: 'Vampiro One', cursive; */
+/* _______________________________________maine color____________________________________ */
+/* _______________________________________fonts style____________________________________ */
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
+/* font-family: 'Just Another Hand', cursive; */
 
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+/* font-family: 'Rock Salt', cursive; */
+
+/* _________________________________________base style___________________________________ */
 * {
     margin: 0;
     padding: 0;
@@ -16,33 +22,61 @@ header{
     width: 100%;
     height: 100vh;
     background: radial-gradient(ellipse at bottom,  #826617 -100%, rgb(6, 3, 0) 60%);
+    position: relative;
     overflow: hidden;
 }
 
-.resp {
-    width: 100%;
-    height: auto;
-}
-
-.say-my-name {
-    width: 60%;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 12;
-}
-
-h1{
-    color: #2a4127;
-    font-size: 10vw;
-    text-align: center;
+/* __________________________________portfolio style____________________________________ */
+.portfolio {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 12;
-    font-family: 'Vampiro One', cursive;
+    color: rgb(246, 246, 246);
+}
+
+h1{
+    font-size: 7.5vw;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    letter-spacing: .15em;
+}
+
+.portfolio > span {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Just Another Hand', cursive;
+    font-size: 1.6vw;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 10%;
+    right: 7%;
+}
+
+.light {
+    height: 200px;
+    width: 250px;
+    top: 706px;
+    left: 43%;
+    filter: blur(101px);
+    border-radius: 50%;
+    opacity: .4;
+    position: absolute;
+    z-index: 1;
+    background-color:rgb(255, 201, 80);
+    border-radius: 6px;
+}
+
+/* ____________________________________header style_______________________________________ */
+header > .container{
+    width: 180px;
+    height: 1065px;
+    position: absolute;
+    top: -650px;
+    left: 78%;
+    z-index: 1000;
+    transform: scale(1.6);
 }
 
 header > .container:nth-child(1){
@@ -50,47 +84,54 @@ header > .container:nth-child(1){
 }
 
 header > .container:nth-child(2){
-    top: -380px;
-    left: 15%;
-    filter: blur(1.5px);
-    z-index: 11;
-    transform: scale(-0.8, 0.8);
+    top: -480px;
+    left: 8.5%;
+    filter: blur(.5px);
+    z-index: 13;
+    transform: scale(-1.2, 1.2);
 }
 
 header > .container:nth-child(3){
-    top: -250px;
-    left: 55%;
-    filter: blur(3.5px);
+    top: -142px;
+    left: 66%;
+    filter: blur(3px);
     z-index: 9;
-    transform: scale(0.62);
+    transform: scale(0.6);
 }
 
 header > .container:nth-child(4){
-    top: -170px;
-    left: 35%;
+    top: -90px;
+    left: 26%;
     filter: blur(6px);
     z-index: 8;
     transform: scale(-0.5, 0.5);
 }
 
 header > .container:nth-child(5){
-    top: -60px;
+    top: 5px;
     left: 50%;
     filter: blur(10px);
     z-index: 7;
     transform: scale(0.3);
 }
 
-header > .container{
-    width: 180px;
-    height: 1065px;
-    position: absolute;
-    top: -500px;
-    left: 70%;
-    z-index: 1000;
-    transform: scale(1.2);
+header > .container:nth-child(7){
+    top: -322px;
+    left: 45%;
+    filter: blur(4px);
+    z-index: 7;
+    transform: scale(0.8);
 }
 
+header > .container:nth-child(8){
+    top: -1430px;
+    left: 34%;
+    filter: blur(4px);
+    z-index: 35;
+    transform: scale(2.4);
+}
+
+/* _____________________________________light style______________________________________ */
 .ampoule {
     background-image: url("../img/Ampoule.png");
     background-size: cover;
@@ -134,12 +175,12 @@ header > .container{
     bottom: 3%;
     left: 50%;
     transform: translateX(-50%);
-    width: 160%;
+    width: 267%;
     height: 30%;
     background-color: rgb(255, 176, 130);
     opacity: 0.2;
     border-radius: 50%;
-    filter: blur(40px);
+    filter: blur(50px);
 }
 
 .container > div:nth-child(2) {
@@ -155,7 +196,6 @@ header > .container{
     filter: blur(40px);
 }
 
-
 .container > div:nth-child(4) {
     position: absolute;
     bottom: 10%;
@@ -168,3 +208,68 @@ header > .container{
     border-radius: 50%;
     filter: blur(40px);
 }
+
+/* ____________________________________light background style__________________________ */
+.light-blur {
+    position: absolute;
+    z-index: 1;
+    background-color:rgb(255, 201, 80);
+    border-radius: 6px;
+}
+
+header > div:nth-child(9) {
+    height: 50px;
+    width: 25px;
+    top: 640px;
+    left: 60%;
+    filter: blur(12px);
+}
+
+header > div:nth-child(10) {
+    height: 45px;
+    width: 23px;
+    top: 655px;
+    left: 36%;
+    filter: blur(13px);
+}
+
+header > div:nth-child(11) {
+    height: 35px;
+    width: 18px;
+    top: 705px;
+    left: 45%;
+    filter: blur(15px);
+}
+
+header > div:nth-child(12) {
+    height: 50px;
+    width: 50px;
+    top: 720px;
+    left: 51%;
+    filter: blur(31px);
+    border-radius: 50%;
+}
+
+header > div:nth-child(13) {
+    height: 200px;
+    width: 250px;
+    top: 706px;
+    left: 43%;
+    filter: blur(101px);
+    border-radius: 50%;
+    opacity: .4;
+}
+
+header > div:nth-child(14) {
+    z-index: 1000;
+    position: absolute;
+    height: 2385px;
+    width: 3000px;
+    left: -28%;
+    top: -145%;
+    filter: blur(80px);
+    border-radius: 50%;
+    opacity: .7;
+    border: solid 35px rgb(255, 201, 80);
+}
+
