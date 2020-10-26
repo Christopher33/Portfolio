@@ -15,21 +15,21 @@
 
 body {
     width: 100%;
-    height: 300vh;
+    height: 200vh;
 }
 
-header{
+.background-light{
     width: 100%;
     height: 100vh;
     background: radial-gradient(ellipse at bottom,  #826617 -100%, rgb(6, 3, 0) 60%);
-    position: relative;
+    position: fixed;
     overflow: hidden;
 }
 
 /* __________________________________portfolio style____________________________________ */
 .portfolio {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 12;
@@ -41,6 +41,7 @@ h1{
     text-align: center;
     font-family: 'Rock Salt', cursive;
     letter-spacing: .15em;
+    filter: blur(.8px);
 }
 
 .portfolio > span {
@@ -54,7 +55,7 @@ h1{
     right: 7%;
 }
 
-.light {
+/* .light {
     height: 200px;
     width: 250px;
     top: 706px;
@@ -66,10 +67,49 @@ h1{
     z-index: 1;
     background-color:rgb(255, 201, 80);
     border-radius: 6px;
+} */
+
+/* _________________________________fixed light_________________________________________ */
+.fixed_light{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120vh;
+    width: 100%;
+    overflow: hidden;
+    border: solid 2px red;
 }
 
-/* ____________________________________header style_______________________________________ */
-header > .container{
+.fixed_light > .container:nth-child(1){
+    z-index: 12;
+}
+
+.fixed_light > .container:nth-child(2){
+    top: -480px;
+    left: 8.5%;
+    filter: blur(.5px);
+    z-index: 13;
+    transform: scale(-1.2, 1.2);
+}
+
+.fixed_light > .container:nth-child(3){
+    top: -322px;
+    left: 45%;
+    filter: blur(4px);
+    z-index: 7;
+    transform: scale(0.8);
+}
+
+.fixed_light > .container:nth-child(4){
+    top: -1430px;
+    left: 34%;
+    filter: blur(4px);
+    z-index: 35;
+    transform: scale(2.4);
+}
+
+/* ____________________________________.background-light style_______________________________________ */
+.container{
     width: 180px;
     height: 1065px;
     position: absolute;
@@ -79,19 +119,7 @@ header > .container{
     transform: scale(1.6);
 }
 
-header > .container:nth-child(1){
-    z-index: 12;
-}
-
-header > .container:nth-child(2){
-    top: -480px;
-    left: 8.5%;
-    filter: blur(.5px);
-    z-index: 13;
-    transform: scale(-1.2, 1.2);
-}
-
-header > .container:nth-child(3){
+.background-light > .container:nth-child(3){
     top: -142px;
     left: 66%;
     filter: blur(3px);
@@ -99,7 +127,7 @@ header > .container:nth-child(3){
     transform: scale(0.6);
 }
 
-header > .container:nth-child(4){
+.background-light > .container:nth-child(1){
     top: -90px;
     left: 26%;
     filter: blur(6px);
@@ -107,28 +135,12 @@ header > .container:nth-child(4){
     transform: scale(-0.5, 0.5);
 }
 
-header > .container:nth-child(5){
+.background-light > .container:nth-child(2){
     top: 5px;
     left: 50%;
     filter: blur(10px);
     z-index: 7;
     transform: scale(0.3);
-}
-
-header > .container:nth-child(7){
-    top: -322px;
-    left: 45%;
-    filter: blur(4px);
-    z-index: 7;
-    transform: scale(0.8);
-}
-
-header > .container:nth-child(8){
-    top: -1430px;
-    left: 34%;
-    filter: blur(4px);
-    z-index: 35;
-    transform: scale(2.4);
 }
 
 /* _____________________________________light style______________________________________ */
@@ -217,7 +229,7 @@ header > .container:nth-child(8){
     border-radius: 6px;
 }
 
-header > div:nth-child(9) {
+.background-light > div:nth-child(4) {
     height: 50px;
     width: 25px;
     top: 640px;
@@ -225,7 +237,7 @@ header > div:nth-child(9) {
     filter: blur(12px);
 }
 
-header > div:nth-child(10) {
+.background-light > div:nth-child(5) {
     height: 45px;
     width: 23px;
     top: 655px;
@@ -233,7 +245,7 @@ header > div:nth-child(10) {
     filter: blur(13px);
 }
 
-header > div:nth-child(11) {
+.background-light > div:nth-child(6) {
     height: 35px;
     width: 18px;
     top: 705px;
@@ -241,7 +253,7 @@ header > div:nth-child(11) {
     filter: blur(15px);
 }
 
-header > div:nth-child(12) {
+.background-light > div:nth-child(7) {
     height: 50px;
     width: 50px;
     top: 720px;
@@ -250,7 +262,7 @@ header > div:nth-child(12) {
     border-radius: 50%;
 }
 
-header > div:nth-child(13) {
+.background-light > div:nth-child(8) {
     height: 200px;
     width: 250px;
     top: 706px;
@@ -260,7 +272,7 @@ header > div:nth-child(13) {
     opacity: .4;
 }
 
-header > div:nth-child(14) {
+.background-light > div:nth-child(9) {
     z-index: 1000;
     position: absolute;
     height: 2385px;
@@ -273,3 +285,45 @@ header > div:nth-child(14) {
     border: solid 35px rgb(255, 201, 80);
 }
 
+/* ____________________________________books________________________________________ */
+.books {
+    position: relative;
+    bottom: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.lamp {
+    position: absolute;
+    top: -35%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.resp {
+    height: auto;
+    width: 100%;
+}
+
+.on-lamp {
+    position: absolute;
+    top: -7%;
+    left: -22%;
+    width: 90%;
+    height: auto;
+    z-index: 11;
+    filter: blur(1px);
+}
+
+.off-lamp {
+    position: absolute;
+    top: -5.3%;
+    left: -20.7%;
+    width: 90%;
+    height: auto;
+    z-index: 10;
+    filter: blur(1px);
+}
