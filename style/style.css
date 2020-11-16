@@ -55,20 +55,6 @@ h1{
     right: 7%;
 }
 
-/* .light {
-    height: 200px;
-    width: 250px;
-    top: 706px;
-    left: 43%;
-    filter: blur(101px);
-    border-radius: 50%;
-    opacity: .4;
-    position: absolute;
-    z-index: 1;
-    background-color:rgb(255, 201, 80);
-    border-radius: 6px;
-} */
-
 /* _________________________________fixed light_________________________________________ */
 .fixed_light{
     position: absolute;
@@ -90,7 +76,7 @@ h1{
 .position_light_2{
     position: absolute;
     top: -430px;
-    left: 11%;
+    left: 9%;
     z-index: 13;
 }
 
@@ -106,6 +92,10 @@ h1{
     top: -1400px;
     left: 32%;
     z-index: 35;
+}
+
+.parallax{
+    transition: .1s linear;
 }
 
 .container{
