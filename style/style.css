@@ -68,9 +68,9 @@ h1{
 /* ____________________________________.background-light style_______________________________________ */
 .position_light_1{
     position: absolute;
-    top: -600px;
+    top: -450px;
     left: 79%;
-    z-index: 12;
+    z-index: 12
 }
 
 .position_light_2{
@@ -89,7 +89,7 @@ h1{
 
 .position_light_4{
     position: absolute;
-    top: -1400px;
+    top: -1600px;
     left: 32%;
     z-index: 35;
 }
@@ -101,7 +101,7 @@ h1{
 .container{
     width: 180px;
     height: 1065px;
-    transform: scale(1.6);
+    transform: scale(2);
 }
 
 .size_c1{
@@ -111,19 +111,19 @@ h1{
 .size_c2{
     position: absolute;
     filter: blur(.5px);
-    transform: scale(-1.2, 1.2);
+    transform: scale(-1.7, 1.7);
 }
 
 .size_c3{
     position: absolute;
     filter: blur(4px);
-    transform: scale(0.8);
+    transform: scale(1);
 }
 
 .size_c4{
     position: absolute;
     filter: blur(4px);
-    transform: scale(2.4);
+    transform: scale(3);
 }
 
 .background-light > .container:nth-child(3){
