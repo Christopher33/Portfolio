@@ -18,10 +18,12 @@ document.addEventListener("mousemove", (e) => {
 
         const speed = parallax.getAttribute('data-speed')
         const x = (window.innerWidth - e.pageX*speed)/100
+        const y = (window.innerHeight - e.pageY*speed)/300
 
-        const h = x.toFixed(1);
+        const h = x.toFixed(1)
+        const v = y.toFixed(1)
 
-        parallax.style.transform = 'translateX('+ h +'px)'
+        parallax.style.transform = 'translate('+ h +'px, ' + v +'px)'
 
         // console.log(h)
     })
