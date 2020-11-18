@@ -15,7 +15,8 @@
 
 body {
     width: 100%;
-    height: 300vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .background-light{
@@ -70,7 +71,10 @@ h1{
     position: absolute;
     top: -450px;
     left: 79%;
-    z-index: 12
+    z-index: 12;
+    animation: mainUp 1s cubic-bezier(1, -0.21, 0.92, 0.79) .5s ;
+    /* animation-fill-mode: forwards; */
+    animation-direction: reverse;
 }
 
 .position_light_2{
@@ -78,6 +82,7 @@ h1{
     top: -430px;
     left: 9%;
     z-index: 13;
+    animation: mainUp 2s cubic-bezier(1, -0.21, 0.92, 0.79) 1s;
 }
 
 .position_light_3{
@@ -85,6 +90,7 @@ h1{
     top: -240px;
     left: 47%;
     z-index: 7;
+    animation: mainUp 2s cubic-bezier(1, -0.21, 0.92, 0.79) .5s;
 }
 
 .position_light_4{
@@ -92,10 +98,7 @@ h1{
     top: -1600px;
     left: 32%;
     z-index: 35;
-}
-
-.parallax{
-    transition: .1s linear;
+    animation: mainUp 2s cubic-bezier(1, -0.21, 0.92, 0.79) .5s ;
 }
 
 .container{
@@ -424,4 +427,15 @@ h1{
     position: relative;
     top: -33%;
     left: -14%;
+}
+
+/* ___________________________animation_______________________________________ */
+
+@keyframes mainUp {
+    from{
+        
+    }
+    to{
+        top: -5000px;
+    }
 }

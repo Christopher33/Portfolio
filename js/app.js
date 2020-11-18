@@ -1,17 +1,4 @@
-// document.addEventListener("mousemove", move);
-// function move(e) {
-//     this.querySelectorAll('.parallax').forEach(parallax => {
-
-//         const speed = parallax.getAttribute('data-speed')
-//         const x = (window.innerWidth - e.pageX*speed)/100
-
-//         const h = x.toFixed(1);
-
-//         parallax.style.transform = 'translateX('+ h +'px)'
-
-//         // console.log(h)
-//     })
-// }
+let tot = 1;
 
 document.addEventListener("mousemove", (e) => {
     document.querySelectorAll('.parallax').forEach(parallax => {
@@ -28,3 +15,16 @@ document.addEventListener("mousemove", (e) => {
         // console.log(h)
     })
 }, false);
+
+
+window.addEventListener('mousewheel', (e) => {
+    if (tot <= 2 && e.deltaY > 0) {
+        tot++;
+    } else if (tot >= 2 && e.deltaY < 0) {
+        tot--;
+    } else {}
+
+    console.log(tot)
+})
+
+
