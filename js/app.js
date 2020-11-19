@@ -1,3 +1,5 @@
+const animations = document.querySelectorAll('.parallax')
+
 let tot = 1;
 
 document.addEventListener("mousemove", (e) => {
@@ -12,7 +14,6 @@ document.addEventListener("mousemove", (e) => {
 
         parallax.style.transform = 'translate('+ h +'px, ' + v +'px)'
 
-        // console.log(h)
     })
 }, false);
 
@@ -20,11 +21,30 @@ document.addEventListener("mousemove", (e) => {
 window.addEventListener('mousewheel', (e) => {
     if (tot <= 2 && e.deltaY > 0) {
         tot++;
+        animate(tot);
     } else if (tot >= 2 && e.deltaY < 0) {
         tot--;
+        animate(tot);
     } else {}
 
     console.log(tot)
 })
 
 
+function animate(t) {
+    if(t == 1) {
+        console.log("page 1")
+        animations.forEach( (animation) => {
+            animation.classList.remove("up")
+            animation.classList.add("down")
+        })
+    } else if(t == 2) {
+        console.log("page 2")        
+        animations.forEach( (animation) => {
+            animation.classList.remove("down")
+            animation.classList.add("up")
+        })
+    } else if(t ==3) {
+        console.log("page 3")        
+    }
+}
