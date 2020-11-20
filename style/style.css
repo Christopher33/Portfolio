@@ -340,22 +340,69 @@ h1{
 }
 
 .big_lamp {
-    width: 100%;
-    height: 100vh;
+    width: 30%;
+    height: 30%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2%;
+    left: -50%;
     z-index: 1002;
+    transform-origin: top;
 }
+
+.left{
+    animation: doc_left 1s .6s forwards;    
+}
+
+@keyframes doc_left {
+    0%{
+        transform: rotate(5deg);
+    }
+    40%{
+        transform: rotate(5deg);
+        left: 16%;
+    }
+    60%{
+        transform: rotate(-5deg);
+        left: 16%;
+    }
+    80%{
+        transform: rotate(2deg);
+        left: 16%;
+    }
+    100%{
+        transform: rotate(0deg);
+        left: 16%;
+    }
+}
+
+
+.left_back{
+    animation: doc_left_back .7s forwards;    
+}
+
+@keyframes doc_left_back {
+    0%{        
+        transform: rotate(0deg);
+        left: 16%;
+    }
+    20%{
+        transform: rotate(-9deg); 
+    }
+    100%{
+        transform: rotate(2deg);
+        left: -50%;
+    }
+}
+
 
 .on-lamp {
     position: absolute;
-    top: -13%;
-    left: -9%;
-    width: 80%;
+    top: 75%;
+    left: 0%;
+    width: 100%;
     height: auto;
     z-index: 10;
-    filter: blur(1px);
+    transform: scale(2.6);
 }
 
 .off-lamp {
@@ -381,6 +428,103 @@ h1{
     transform: scale(.5) rotate(-4deg);
 }
 
+.box_doc{
+    position: absolute;
+    top: -55%;
+    left: 45%;
+    width: 100%;
+    height: auto;
+}
+
+.right{
+    animation: doc_right 1s .5s cubic-bezier(0.64, -0.01, 0.24, 1.27) forwards;    
+}
+
+@keyframes doc_right {
+    100%{
+        left: 1%;
+    }
+}
+
+.right_back{
+    animation: doc_right_back .3s cubic-bezier(1, -0.21, 0.92, 0.79) forwards;    
+}
+
+@keyframes doc_right_back {
+    0%{
+        left: 1%;
+    }
+    100%{
+        left: 45%;
+    }
+}
+
+.doc2 {
+    position: absolute;
+    top: -45%;
+    left: -4%;
+    width: 200%;
+    height: 200%;
+    z-index: 10;
+    filter: blur(20px);
+    overflow: hidden;
+    opacity: .55;
+    pointer-events: none;
+}
+
+.doc{
+    animation: doc 1s .6s forwards;
+}
+
+@keyframes doc {
+    0%{
+        transform: rotate(0deg);
+        top: 0%;
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    65%{
+        transform: rotate(3deg);
+    }
+    80%{
+        transform: rotate(-2deg);
+        top: -45%;
+    }
+    100%{
+        transform: rotate(0deg);
+        top: -45%;
+    }
+}
+
+.doc_back{
+    animation: doc_back .5s forwards;
+}
+
+@keyframes doc_back{
+    0%{
+        transform: rotate(0deg);
+        top: -45%;
+    }
+    40%{
+        transform: rotate(2.5deg);
+        top: -55%;
+    }
+    100%{
+        transform: rotate(0deg);
+        top: -45%;
+    }
+}
+
+.box_shadow{
+    position: absolute;
+    top: 18%;
+    left: 23.5%;
+    width: 57%;
+    height: 66.6%;
+    overflow: hidden;
+}
+
 .shadow {
     position: absolute;
     top: -14%;
@@ -403,19 +547,6 @@ h1{
 
 .rot_shadow{
     transform: rotate(7deg);
-}
-
-.doc2{
-    position: absolute;
-    top: 18%;
-    left: 22.5%;
-    width: 59%;
-    height: 66.6%;
-    z-index: 10;
-    filter: blur(9px);
-    overflow: hidden;
-    opacity: .6;
-    pointer-events: none;
 }
 
 .feuille {
