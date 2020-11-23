@@ -2,8 +2,10 @@ const animations = document.querySelectorAll('.parallax')
 const box_doc = document.querySelector('.box_doc')
 const big_lamp = document.querySelector('.big_lamp')
 const shadow = document.querySelector('.doc2')
+const about = document.querySelector('.about')
 
 let tot = 1;
+let i = 0;
 
 document.addEventListener("mousemove", (e) => {
     document.querySelectorAll('.parallax').forEach(parallax => {
@@ -29,8 +31,6 @@ window.addEventListener('mousewheel', (e) => {
         tot--;
         animate(tot);
     } else {}
-
-    console.log(tot)
 })
 
 
@@ -63,10 +63,17 @@ function animate(t) {
         big_lamp.classList.remove("left_back")
         box_doc.classList.remove("right_back")
         shadow.classList.remove("doc_back")
+        about.classList.remove("ani_about")
 
         big_lamp.classList.add("left")
         box_doc.classList.add("right")
         shadow.classList.add("doc")
+
+        if( i >= 1 ) {
+            about.classList.add("ani_about_back")
+        }
+        i++;
+        console.log(i)
 
     } else if(t ==3) {
 
@@ -76,11 +83,13 @@ function animate(t) {
         box_doc.classList.remove("right")
         shadow.classList.remove("doc")
 
+        about.classList.remove("ani_about_back")
+
         shadow.classList.add("doc_back")
         big_lamp.classList.add("left_back")
         box_doc.classList.add("right_back")
 
-
+        about.classList.add("ani_about")
 
     }
 }
