@@ -37,6 +37,32 @@ body {
     color: rgb(246, 246, 246);
 }
 
+.P_folio{
+    animation: portfolio .5s .2s forwards;
+    opacity: 0;
+}
+
+@keyframes portfolio {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.P_folio_back{
+    animation: portfolio_back .5s forwards;
+}
+
+@keyframes portfolio_back {
+    0%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 h1{
     font-size: 7.5vw;
     text-align: center;
@@ -751,4 +777,10 @@ h1{
     100%{
         opacity: 1;
     }
+}
+
+.test{
+    position: absolute;
+    height: auto;
+    width: 20%;
 }
