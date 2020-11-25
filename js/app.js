@@ -1,5 +1,5 @@
 const portfolio = document.querySelector('.portfolio')
-const animations = document.querySelectorAll('.parallax')
+const animations = document.querySelectorAll('.lamp')
 const box_doc = document.querySelector('.box_doc')
 const big_lamp = document.querySelector('.big_lamp')
 const shadow = document.querySelector('.doc2')
@@ -10,7 +10,7 @@ let i = 0;
 
 
 document.addEventListener("mousemove", (e) => {
-    document.querySelectorAll('.parallax').forEach(parallax => {
+    document.querySelectorAll('.lamp').forEach(parallax => {
 
         const speed = parallax.getAttribute('data-speed')
         const x = (window.innerWidth - e.pageX*speed)/100

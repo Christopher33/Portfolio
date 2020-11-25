@@ -19,14 +19,6 @@ body {
     overflow: hidden;
 }
 
-.background-light{
-    width: 100%;
-    height: 100vh;
-    background: radial-gradient(ellipse at bottom,  #826617 -100%, rgb(6, 3, 0) 60%);
-    position: fixed;
-    overflow: hidden;
-}
-
 /* __________________________________portfolio style____________________________________ */
 .portfolio {
     position: absolute;
@@ -82,17 +74,16 @@ h1{
     right: 7%;
 }
 
-/* _________________________________fixed light_________________________________________ */
+/* ____________________________________.lamp first _______________________________________ */
 .fixed_light{
     position: absolute;
     top: 0;
     left: 0;
-    height: 120vh;
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
 
-/* ____________________________________.background-light style_______________________________________ */
 .up{
     animation: mainUp;
     animation-duration: .8s;
@@ -109,236 +100,140 @@ h1{
     opacity: 0;
 }
 
-.position_light_1{
+.lamp{
     position: absolute;
-    top: -450px;
-    left: 79%;
-    z-index: 12;
+    z-index: 2000;
+    height: auto;
+}
+
+.fixed_light > .lamp:nth-child(2) {
+    top: -215%;
+    left: 31%;
+    width: 19%;
+    filter: blur(11px);
     animation-delay: .1s;
 }
 
-.position_light_2{
-    position: absolute;
-    top: -430px;
-    left: 9%;
-    z-index: 13;
-    animation-delay: .1s;
-}
-
-.position_light_3{
-    position: absolute;
-    top: -240px;
-    left: 47%;
-    z-index: 7;
-    animation-delay: .2s;
-
-}
-
-.position_light_4{
-    position: absolute;
-    top: -1600px;
-    left: 32%;
-    z-index: 35;    
+.fixed_light > .lamp:nth-child(3) {
+    top: -95%;
+    left: 78%;
+    width: 13%;
+    filter: blur(0px);
     animation-delay: .3s;
-
 }
 
-.container{
-    width: 180px;
-    height: 1065px;
-    transform: scale(2);
-}
-
-.size_c1{
-    position: absolute;
-}
-
-.size_c2{
-    position: absolute;
-    filter: blur(.5px);
-    transform: scale(-1.7, 1.7);
-}
-
-.size_c3{
-    position: absolute;
-    filter: blur(4px);
-    transform: scale(1);
-}
-
-.size_c4{
-    position: absolute;
-    filter: blur(4px);
-    transform: scale(3);
-}
-
-
-.background-light > .container:nth-child(1){
-    position: absolute;
-    top: 15%;
-    left: 26%;
-    filter: blur(6px);
-    z-index: 0;
-    transform: scale(-0.5, 0.5);
-}
-
-.background-light > .container:nth-child(2){
-    position: absolute;
-    top: 23%;
-    left: 50%;
-    filter: blur(14px);
-    z-index: 0;
-    transform: scale(0.3);
-}
-
-.background-light > .container:nth-child(3){
-    position: absolute;
-    top: 13%;
-    left: 66%;
-    filter: blur(5px);
-    z-index: 9;
-    transform: scale(0.6);
-}
-/* _____________________________________light style______________________________________ */
-.ampoule {
-    background-image: url("../img/Ampoule.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    transform: scale(0.8);
-}
-
-.ampoule > div {
-    width: 1.5%;
-    background-color: rgb(255, 238, 0);
-    position: absolute;
-    bottom: 5.5%;
-    border-radius: 35%;
-    opacity: 0.7;
+.fixed_light > .lamp:nth-child(4) {
+    top: -65%;
+    left: 7%;
+    width: 11%;
     filter: blur(1px);
+    animation-delay: .1s;
 }
 
-.ampoule > div:nth-child(1) {
-    height: 18%;
-    left: 35%;
+.fixed_light > .lamp:nth-child(5) {
+    top: -9%;
+    left: 37%;
+    width: 7.5%;
+    filter: blur(4px);
+    z-index: 1;
+    animation-delay: 0s;
 }
 
-.ampoule > div:nth-child(2) {
-    height: 19%;
-    left: 44%;
-}
-
-.ampoule > div:nth-child(3) {
-    height: 19%;
+.fixed_light > .lamp:nth-child(6) {
+    top: 39%;
     left: 58%;
+    width: 4.5%;
+    filter: blur(7px);
+    z-index: 1;
+    animation-delay: .1s;
 }
 
-.ampoule > div:nth-child(4) {
-    height: 18%;
-    left: 65.5%;
-}
-
-.container > div:nth-child(1) {
+.filament{
     position: absolute;
-    bottom: 3%;
+    top: 76.5%;
+    z-index: 2001;
+    width: 1.8%;
+    height: 17.5%;
+    background-color: rgb(255, 238, 0);
+    border-radius: 4px;
+    filter: blur(1.5px);
+}
+
+.Z-img{
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 267%;
-    height: 30%;
-    background-color: rgb(255, 176, 130);
-    opacity: 0.2;
+    z-index: 1999;
+    width: 100%;
+    height: auto;
+}
+
+.lamp > .filament:nth-child(2){
+    left: 33%;
+}
+
+.lamp > .filament:nth-child(3){
+    left: 42%;
+}
+
+.lamp > .filament:nth-child(4){
+    left: 56%;
+}
+
+.lamp > .filament:nth-child(5){
+    left: 65%;
+}
+
+.lumiereAvant{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    z-index: 2002;
+    transform: translateX(-50%);
+    width: 82%;
+    height: 25%;
+    background-color:rgb(255, 213, 58);
+    opacity: 0.7;
     border-radius: 50%;
-    filter: blur(50px);
+    filter: blur(40px);
 }
 
-.container > div:nth-child(2) {
+.lumiereLiaison{
     position: absolute;
-    bottom: 15%;
+    bottom: 2%;
     left: 50%;
+    z-index: 1998;
     transform: translateX(-50%);
-    width: 40%;
-    height: 20%;
+    width: 82%;
+    height: 25%;
     background-color: rgb(255, 176, 130);
     opacity: 0.8;
     border-radius: 50%;
     filter: blur(40px);
 }
 
-.container > div:nth-child(4) {
+.lumiereArriere{
     position: absolute;
-    bottom: 10%;
+    bottom: -11%;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
-    height: 25%;
-    background-color: rgb(255, 213, 58);
-    opacity: 1;
+    width: 250%;
+    height: 45%;
+    z-index: 1997;
+    background-color: rgb(255, 176, 130);
+    opacity: 0.2;
     border-radius: 50%;
-    filter: blur(40px);
+    filter: blur(100px);
 }
 
 /* ____________________________________light background style__________________________ */
-.light-blur {
-    position: absolute;
-    z-index: -1;
-    background-color:rgb(255 190 122);
-    border-radius: 6px;
-}
 
-.background-light > div:nth-child(4) {
-    height: 50px;
-    width: 25px;
-    top: 75%;
-    left: 58%;
-    filter: blur(20px);
-}
-
-.background-light > div:nth-child(5) {
-    height: 45px;
-    width: 23px;
-    top: 79%;
-    left: 40%;
-    filter: blur(19px);
-}
-
-.background-light > div:nth-child(6) {
-    height: 35px;
-    width: 18px;
-    top: 84%;
-    left: 45%;
-    filter: blur(15px);
-}
-
-.background-light > div:nth-child(7) {
-    height: 70px;
-    width: 70px;
-    top: 84%;
-    left: 50%;
-    filter: blur(50px);
-    border-radius: 50%;
-}
-
-.background-light > div:nth-child(8) {
-    height: 200px;
-    width: 250px;
-    top: 90%;
-    left: 44%;
-    filter: blur(100px);
-    border-radius: 50%;
-    opacity: .4;
-}
-
-.background-light > div:nth-child(9) {
-    z-index: 1000;
-    position: absolute;
-    height: 2385px;
-    width: 3500px;
-    left: 50%;
-    top: -65%;
-    filter: blur(80px);
-    border-radius: 50%;
-    opacity: .7;
-    border: solid 35px rgb(255, 201, 80);
-    transform: translateX(-50%);
+.background-light{
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom,  #826617 -100%, rgb(6, 3, 0) 60%);
+    position: fixed;
+    overflow: hidden;
 }
 
 /* ____________________________________books________________________________________ */
@@ -350,14 +245,6 @@ h1{
     width: 100%;
     height: 100vh;
     overflow: hidden;
-}
-
-.lamp {
-    position: absolute;
-    top: -35%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
 }
 
 .resp {
@@ -784,3 +671,24 @@ h1{
     height: auto;
     width: 20%;
 }
+
+
+
+/* 
+.lampe:nth-child(){
+    top: ;
+    left: ;
+    width: ;
+    filter: blur();
+}
+ */
+
+
+
+
+
+
+
+
+
+
