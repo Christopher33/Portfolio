@@ -1,3 +1,6 @@
+const pageOne = document.getElementById('one')
+const pageTwo = document.getElementById('two')
+const pageThree = document.getElementById('three')
 const portfolio = document.querySelector('.portfolio')
 const animations = document.querySelectorAll('.lamp')
 const box_doc = document.querySelector('.box_doc')
@@ -43,12 +46,13 @@ function animate(t) {
             animation.classList.remove("up")
             animation.classList.add("down")
         })
-        
+        pageTwo.classList.remove("openCross")
         portfolio.classList.remove("P_folio_back")
         big_lamp.classList.remove("left")
         box_doc.classList.remove("right")
         shadow.classList.remove("doc")
         
+        pageOne.classList.add("openCross")
         shadow.classList.add("doc_back")
         big_lamp.classList.add("left_back")
         box_doc.classList.add("right_back")    
@@ -61,12 +65,15 @@ function animate(t) {
             animation.classList.remove("down")
             animation.classList.add("up")
         })
+        pageOne.classList.remove("openCross")
+        pageThree.classList.remove("openCross")
         portfolio.classList.remove("P_folio")
         big_lamp.classList.remove("left_back")
         box_doc.classList.remove("right_back")
         shadow.classList.remove("doc_back")
         about.classList.remove("ani_about")
         
+        pageTwo.classList.add("openCross")
         portfolio.classList.add("P_folio_back")
         big_lamp.classList.add("left")
         box_doc.classList.add("right")
@@ -80,12 +87,14 @@ function animate(t) {
     } else if(t ==3) {
         
         console.log("page 3") 
-        
+
+        pageTwo.classList.remove("openCross")
         big_lamp.classList.remove("left")
         box_doc.classList.remove("right")
         shadow.classList.remove("doc")
         about.classList.remove("ani_about_back")
         
+        pageThree.classList.add("openCross")
         shadow.classList.add("doc_back")
         big_lamp.classList.add("left_back")
         box_doc.classList.add("right_back")
