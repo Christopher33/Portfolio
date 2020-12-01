@@ -7,9 +7,11 @@ const box_doc = document.querySelector('.box_doc')
 const big_lamp = document.querySelector('.big_lamp')
 const shadow = document.querySelector('.doc2')
 const about = document.querySelector('.about')
+const body = document.querySelector('.new-body')
 
 let tot = 1;
 let i = 0;
+let width = 0;
 
 
 document.addEventListener("mousemove", (e) => {
@@ -22,9 +24,23 @@ document.addEventListener("mousemove", (e) => {
         const h = x.toFixed(1)
         const v = y.toFixed(1)
 
-        parallax.style.transform = 'translate('+ h +'px, ' + v +'px)'
+        parallax.style.transform = 'translate('+ h +'px, '+ v +'px)'
     })
 }, false);
+
+
+window.addEventListener('resize', (e) => {
+    width = e.currentTarget.innerWidth / 2.12
+    body.style.height = width + 'px'
+})
+
+
+function windowSizeFirst() {
+    let i = window.innerWidth / 2.12
+    body.style.height = i + 'px'    
+}
+
+windowSizeFirst()
 
 
 window.addEventListener('mousewheel', (e) => {
@@ -41,7 +57,8 @@ window.addEventListener('mousewheel', (e) => {
 function animate(t) {
     if(t == 1) {
 
-        console.log("page 1")
+        // console.log("page 1")
+
         animations.forEach( (animation) => {
             animation.classList.remove("up")
             animation.classList.add("down")
@@ -60,7 +77,8 @@ function animate(t) {
         
     } else if(t == 2) {
         
-        console.log("page 2")        
+        // console.log("page 2")   
+
         animations.forEach( (animation) => {
             animation.classList.remove("down")
             animation.classList.add("up")
@@ -86,7 +104,7 @@ function animate(t) {
         
     } else if(t ==3) {
         
-        console.log("page 3") 
+        // console.log("page 3") 
 
         pageTwo.classList.remove("openCross")
         big_lamp.classList.remove("left")
@@ -101,3 +119,5 @@ function animate(t) {
         about.classList.add("ani_about")
     }
 }
+
+
