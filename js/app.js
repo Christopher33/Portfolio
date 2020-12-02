@@ -11,7 +11,7 @@ const body = document.querySelector('.new-body')
 
 let tot = 1;
 let i = 0;
-let width = 0;
+let width;
 
 
 document.addEventListener("mousemove", (e) => {
