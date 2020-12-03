@@ -150,6 +150,7 @@ header > .page:nth-child(4){
     transform: translate(-50%, -50%);
     z-index: 12;
     color: rgb(246, 246, 246);
+    pointer-events: none;
 }
 
 .P_folio{
@@ -473,7 +474,6 @@ h1{
     }
 }
 
-
 .left_back{
     animation: doc_left_back .7s forwards;    
 }
@@ -492,7 +492,6 @@ h1{
     }
 }
 
-
 .on-lamp {
     position: absolute;
     top: 75%;
@@ -506,18 +505,23 @@ h1{
 
 .doc1{
     position: absolute;
-    top: -57%;
-    left: 27%;
-    width: 100%;
+    left: 49%;
+    width: 58%;
     height: auto;
     z-index: 10;
     filter: blur(1px);
     transform: scale(.5) rotate(-4deg);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.doc1:hover{
+    transform: scale(.53) rotate(-3deg);
 }
 
 .box_doc{
     position: absolute;
-    top: -55%;
+    top: -20%;
     left: 45%;
     width: 100%;
     height: auto;
@@ -553,7 +557,7 @@ h1{
     width: 200%;
     height: 200%;
     z-index: 10;
-    filter: blur(20px);
+    filter: blur(12px);
     overflow: hidden;
     opacity: .55;
     pointer-events: none;
@@ -605,11 +609,11 @@ h1{
 
 .box_shadow{
     position: absolute;
-    top: 18%;
-    left: 23.5%;
+    top: 0%;
+    left: 0%;
     z-index: 1000;
-    width: 57%;
-    height: 66.6%;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -638,17 +642,17 @@ h1{
 }
 
 .feuille {
-    width: 100%;
+    width: 90%;
     height: auto;
     position: absolute;
     top: 2%;
-    left: -2.5%;
+    left: 2.5%;
     z-index: -1;
 }
 
 .title-l4r{
     position: absolute;
-    top: 35%;
+    top: 25%;
     left: 53%;
     transform: translateX(-50%);
     font-size: 5vw;
@@ -658,20 +662,20 @@ h1{
 
 .img_l4r{
     position: absolute;
-    top: 59.5%;
-    left: 58%;
+    top: 61.5%;
+    left: 61%;
     z-index: 100;
-    width: 21%;
+    width: 36%;
     transform: rotate(1deg);
     height: auto;
 }
 
 .agraffe{
     position: absolute;
-    top: 60%;
-    left: 72.6%;
+    top: 62%;
+    left: 83.6%;
     z-index: 101;
-    width: 10%;
+    width: 20%;
     transform: rotate(-4deg);
     height: auto;
 }
@@ -681,25 +685,22 @@ h1{
     top: 67%;
     left: 22%;
     z-index: 100;
-    border: solid 4px white;
+    border: solid .3vw white;
     border-radius: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 1vw 10vw;
     cursor: pointer;
+    width: 18%;
+    height: 10%;
 }
 
 .link-l4r > span{
     color: white;
     font-family: 'Spartan', sans-serif;
-    font-size: 2em;
-    line-height: 2em;
-}
-
-.logo-size{
-    width: 45px;
-    height: auto;
+    font-size: 2vw;
+    line-height: 2vw;
 }
 
 /* ___________________________________about me_____________________________ */
@@ -857,7 +858,39 @@ h1{
     opacity: .6;
 }
 
-/* ___________________________animation_______________________________________ */
+
+/*_______________________________________________ paper___________________________________________ */
+
+.paper{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.place_paper{
+    position: absolute;
+    right: 0%;
+    top: -2%;
+    width: 70%;
+    height: auto;
+}
+
+
+.text_l4r {
+    position: absolute;
+    top: 1%;
+    left: 0%;
+    overflow-y: scroll;
+    height: 55%;
+    width: 100%;
+    resize: none;
+    background-color:rgba(0, 0, 0, 0);
+    border: none;
+}
+
+/* ________________________________________________animation___________________________________________________ */
 
 @keyframes mainUp {
     from{
@@ -896,12 +929,6 @@ h1{
         opacity: 1;
     }
 }
-
-
-
-
-
-
 
 
 
