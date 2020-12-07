@@ -9,7 +9,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&display=swap');
 /* font-family: 'Beth Ellen', cursive; */
 
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600&display=swap');
 /* font-family: 'Spartan', sans-serif; */
 
 /* _________________________________________base style___________________________________ */
@@ -32,7 +32,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    /* height: 722px; */
     overflow: hidden;
 }
 
@@ -877,7 +876,6 @@ h1{
     height: auto;
 }
 
-
 .text_l4r {
     position: absolute;
     top: 1%;
@@ -886,8 +884,102 @@ h1{
     height: 55%;
     width: 100%;
     resize: none;
-    background-color:rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     border: none;
+    padding: 0 15% 0 15%;
+    overflow-x: hidden;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 400;
+    color: rgb(39, 39, 87);
+}
+
+.asso{
+    font-size: 2vw;
+    font-weight: 400;
+    padding: 10% 0 0 1%;
+    color: white;
+    position: relative;
+    z-index: 10000;
+}
+
+.title_l4r{
+    font-size: 6vw;
+}
+
+.back_blue{
+    width: 53%;
+    height: 29%;
+    background-color: #2b39e2;
+    opacity: 0.1;
+    position: absolute;
+    top: 8%;
+    left: 25%;
+}
+
+.logo{
+    position: absolute;
+    top: 6%;
+    left: 67%;
+    z-index: 10000;
+    width: 17%;
+    height: auto;
+    transform: scaleX(-1);
+}
+
+.link_site{
+    width: 20%;
+    height: 6%;
+    position: absolute;
+    top: 35%;
+    left: 19%;
+    z-index: 10000;
+    border: solid 2px #a12828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a12828;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.link_site:hover{
+    background-color: #a12828;
+    color: rgba(255, 255, 255, 0.822);
+}
+
+.link_site > span:nth-child(1){
+    font-size: 1vw;
+}
+
+.role_date_ap{
+    position: relative;
+    top: 10%;
+    left: 50%;
+    width: 120%;
+    transform: translateX(-48%);
+    padding: 12% 0 5% 0;
+}
+
+.role_date_ap > div:nth-child(1){
+    display: flex;
+    justify-content: space-around;
+}
+
+.role, .date, .aper{
+    width: 100%;
+}
+
+h3{
+    padding-bottom: 2%;
+    font-weight: 600;
+    font-size: 1.2vw;
+    letter-spacing: .1vw;
+}
+
+p{
+    line-height: 1.4;
+    font-size: .95vw;
 }
 
 /* ________________________________________________animation___________________________________________________ */
