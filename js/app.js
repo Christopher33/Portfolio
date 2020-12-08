@@ -8,12 +8,14 @@ const big_lamp = document.querySelector('.big_lamp')
 const shadow = document.querySelector('.doc2')
 const about = document.querySelector('.about')
 const body = document.querySelector('.new-body')
+const paper = document.querySelector('.place_paper')
+const glass = document.querySelector('.glass')
 
 let tot = 1;
 let i = 0;
 let width;
 
-
+// __________________________Mouving light first page______________________
 document.addEventListener("mousemove", (e) => {
     document.querySelectorAll('.lamp').forEach(parallax => {
 
@@ -29,11 +31,11 @@ document.addEventListener("mousemove", (e) => {
 }, false);
 
 
+// _________________________Listener for responsive_________________________
 window.addEventListener('resize', (e) => {
     width = e.currentTarget.innerWidth / 2.12
     body.style.height = width + 'px'
 })
-
 
 function windowSizeFirst() {
     let i = window.innerWidth / 2.12
@@ -42,22 +44,39 @@ function windowSizeFirst() {
 
 windowSizeFirst()
 
+// __________________________function onClick_______________________________
+function showPaper() {
+    paper.style.right = 0 + '%'
+    glass.style.backdropFilter = 'blur(10px)'
+    tot = 11
+}
 
+function closePaper() {
+    paper.style.right = -70 + '%'
+    glass.style.backdropFilter = 'blur(0px)'
+    tot = 2
+}
+
+// ___________________________________counting page___________________________
 window.addEventListener('mousewheel', (e) => {
-    if (tot <= 2 && e.deltaY > 0) {
+
+    if(tot === 11) {
+        tot = 11
+    } 
+    else if (tot <= 2 && e.deltaY > 0) {
         tot++
         animate(tot)
     } else if (tot >= 2 && e.deltaY < 0) {
         tot--
         animate(tot)
-    } else {}
+    }
+    console.log(tot)
 })
 
 
+// _____________________________function animation pages________________________
 function animate(t) {
     if(t == 1) {
-
-        // console.log("page 1")
 
         animations.forEach( (animation) => {
             animation.classList.remove("up")
@@ -76,8 +95,6 @@ function animate(t) {
         portfolio.classList.add("P_folio")
         
     } else if(t == 2) {
-        
-        // console.log("page 2")   
 
         animations.forEach( (animation) => {
             animation.classList.remove("down")
@@ -104,8 +121,6 @@ function animate(t) {
         
     } else if(t ==3) {
         
-        // console.log("page 3") 
-
         pageTwo.classList.remove("openCross")
         big_lamp.classList.remove("left")
         box_doc.classList.remove("right")

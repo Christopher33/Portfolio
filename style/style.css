@@ -870,10 +870,59 @@ h1{
 
 .place_paper{
     position: absolute;
-    right: 0%;
+    right: -70%;
     top: -2%;
     width: 70%;
     height: auto;
+    z-index: 100000;
+    transition: .5s ease;
+}
+
+.close{
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    z-index: 1;
+    width: 5%;
+    height: 3%;
+    cursor: pointer;
+}
+
+.close > div:nth-child(1){
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background-color: #a12828;
+    width: 100%;
+    height: 10%;
+    transform: rotate(-45deg);
+    transition: .2s ease-in-out;
+}
+
+.close > div:nth-child(2){
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    background-color: #a12828;
+    width: 100%;
+    height: 10%;
+    transform: rotate(45deg);
+    transition: .2s ease-in-out;
+}
+
+.close:hover > div:nth-child(1){
+    top: 91%;
+    left: -60%;
+    background-color: #a12828;
+    width: 150%;
+    height: 10%;
+    transform: rotate(0deg);
+}
+
+.close:hover > div:nth-child(2){
+    top: 57%;
+    left: 30%;
+    width: 69%;
 }
 
 .text_l4r {
@@ -909,8 +958,7 @@ h1{
 .back_blue{
     width: 53%;
     height: 29%;
-    background-color: #2b39e2;
-    opacity: 0.1;
+    background-color: #2b3ae217;
     position: absolute;
     top: 8%;
     left: 25%;
@@ -933,7 +981,7 @@ h1{
     top: 35%;
     left: 19%;
     z-index: 10000;
-    border: solid 2px #a12828;
+    border: solid .15vw #a12828;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -941,6 +989,7 @@ h1{
     font-weight: 600;
     cursor: pointer;
     transition: .3s ease;
+    text-decoration: none;
 }
 
 .link_site:hover{
@@ -958,7 +1007,7 @@ h1{
     left: 50%;
     width: 120%;
     transform: translateX(-48%);
-    padding: 12% 0 5% 0;
+    padding-top: 15%;
 }
 
 .role_date_ap > div:nth-child(1){
@@ -968,6 +1017,8 @@ h1{
 
 .role, .date, .aper{
     width: 100%;
+    position: relative;
+    z-index: 10000;
 }
 
 h3{
@@ -980,6 +1031,75 @@ h3{
 p{
     line-height: 1.4;
     font-size: .95vw;
+}
+
+.screen_pc{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6% 0 6% 0;
+    width: 70%;
+    height: auto;
+}
+
+.screen_phone{
+    position: absolute;
+    top: 27%;
+    left: 12%;
+    z-index: 10000;
+    width: 16%;
+    height: auto;
+}
+
+.img_large{
+    position: relative;
+    left: -11.5%;
+    width: 120%;
+    padding: 5% 0 5% 0;
+}
+
+.back_white{
+    position: absolute;
+    top: 5%;
+    left: 6%;
+    z-index: -1;
+    background-color: white;
+    width: 55%;
+    height: 66%;
+    opacity: .15;
+}
+
+.concept, .develop{
+    position: relative;
+    z-index: 10000;
+}  
+
+.footer_l4r{
+    display: flex;
+    justify-content: flex-end;
+    width: 108%;
+    background-color: #2b3ae217;
+    padding: 3%;
+    margin-top: 6%;
+}
+
+.footer_l4r > a{
+    width: 5%;
+    height: auto;
+    margin: 0 2% 0 2%;
+    cursor: pointer;
+}
+
+.glass{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    transition: .4s ease;
+    transition-delay: .2s;
+    pointer-events: none;
 }
 
 /* ________________________________________________animation___________________________________________________ */
