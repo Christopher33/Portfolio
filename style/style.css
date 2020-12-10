@@ -42,7 +42,7 @@ header{
     height: 100%;
     overflow: hidden;
     position: fixed;
-    z-index: 9000;
+    z-index: 90000;
     pointer-events: none;
 }
 
@@ -141,6 +141,28 @@ header > .page:nth-child(4){
     width: 6%;
 }
 
+.link{
+    position: absolute;
+    top: 6%;
+    right: 4%;
+    z-index: 90000;
+    width: 11%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: all;
+}
+
+.link > a{
+    width: 22%;
+}
+
+.link > a:nth-child(3){
+    width: 25%;
+}
+
+
+
 /* __________________________________portfolio style____________________________________ */
 .portfolio {
     position: absolute;
@@ -230,7 +252,7 @@ h1{
 }
 
 .fixed_light > .lamp:nth-child(2) {
-    top: -207%;
+    top: -152%;
     left: 31%;
     width: 19%;
     filter: blur(11px);
@@ -238,7 +260,7 @@ h1{
 }
 
 .fixed_light > .lamp:nth-child(3) {
-    top: -103%;
+    top: -63%;
     left: 78%;
     width: 13%;
     filter: blur(2px);
@@ -246,7 +268,7 @@ h1{
 }
 
 .fixed_light > .lamp:nth-child(4) {
-    top: -65%;
+    top: -34%;
     left: 7%;
     width: 11%;
     filter: blur(1px);
@@ -254,7 +276,7 @@ h1{
 }
 
 .fixed_light > .lamp:nth-child(5) {
-    top: -12%;
+    top: 10%;
     left: 40%;
     width: 7.5%;
     filter: blur(4px);
@@ -263,7 +285,7 @@ h1{
 }
 
 .fixed_light > .lamp:nth-child(6) {
-    top: 30%;
+    top: 44%;
     left: 62%;
     width: 4.5%;
     filter: blur(7px);
@@ -273,10 +295,10 @@ h1{
 
 .filament{
     position: absolute;
-    top: 76.5%;
+    top: 69%;
     z-index: 2001;
     width: 1.8%;
-    height: 17.5%;
+    height: 23%;
     background-color: rgb(255, 238, 0);
     border-radius: 4px;
     filter: blur(1.5px);
@@ -313,9 +335,9 @@ h1{
     left: 50%;
     z-index: 2002;
     transform: translateX(-50%);
-    width: 82%;
-    height: 25%;
-    background-color:rgb(255, 213, 58);
+    width: 87%;
+    height: 33%;
+    background-color: rgb(255, 213, 58);
     opacity: 0.7;
     border-radius: 50%;
     filter: blur(40px);
@@ -323,12 +345,12 @@ h1{
 
 .lumiereLiaison{
     position: absolute;
-    bottom: 2%;
+    bottom: 1%;
     left: 50%;
     z-index: 1998;
     transform: translateX(-50%);
-    width: 82%;
-    height: 25%;
+    width: 108%;
+    height: 35%;
     background-color: rgb(255, 176, 130);
     opacity: 0.8;
     border-radius: 50%;
@@ -337,11 +359,11 @@ h1{
 
 .lumiereArriere{
     position: absolute;
-    bottom: -11%;
+    bottom: -19%;
     left: 50%;
     transform: translateX(-50%);
-    width: 250%;
-    height: 45%;
+    width: 249%;
+    height: 63%;
     z-index: 1997;
     background-color: rgb(255, 176, 130);
     opacity: 0.2;
@@ -738,10 +760,10 @@ h1{
 }
 
 .pancarte {
-    width: 18%;
+    width: 16%;
     height: auto;
     position: absolute;
-    top: -5%;
+    top: 2%;
     right: -1%;
 }
 
@@ -860,17 +882,44 @@ h1{
 /*______________________________________ About me _________________________*/
 
 .about_me{
-    position: absolute;
-    top: 15%;
+    position: fixed;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    height: 80%;
+    transform: translate(-50%, -50%);
+    width: 60%;
     color: white;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0;
+    transition: .6s .3s ease;
+    pointer-events: none;
+    filter: blur(.4px);
 }
 
-h2{
-    font-size: 1.5vw;
+.look{
+    opacity: 1;
+}
+
+.about_title_h2:first-of-type{
+    padding-top: 0;
+}
+
+.about_title_h2{
+    font-size: 1.2vw;
+    padding: 2% 0 2% 0;
+    letter-spacing: .3vw;
+    color:  rgb(95, 123, 63);
+}
+
+.about_title_h3{
+    font-size: 1.2vw;
+    text-align: center;
+    padding: 3% 0 4% 0;
+    color: rgb(95, 123, 63);
+}
+
+.about_text{
+    font-size: .9vw;
+    letter-spacing: .05vw;
 }
 
 .passion{
@@ -881,25 +930,36 @@ h2{
 .passion > div:nth-child(1), 
 .passion > div:nth-child(2), 
 .passion > div:nth-child(3){
-    padding: 3% 5% 13% 5%;
+    padding: 2% 5% 9% 5%;
     width: 100%;
+}
+
+.TMS{
+    position: relative;
+    left: 50%;
+    width: 80%;
+    height: 55%;
+    transform: translateX(-50%);
+}
+
+.language{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: .05vw;
+    font-size: 1.2vw;
 }
 
 /* animation techno */
-.techno{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
 .bras_top{
     position: absolute;
-    bottom: 64%;
-    left: 24%;
+    bottom: 62%;
+    left: 23%;
     width: 44%;
     height: auto;
     transform-origin: 5% 95%;
     animation: soudur 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+    display: flex;
 }
 
 @keyframes soudur{
@@ -922,7 +982,7 @@ h2{
 
 .bras_top > div:nth-child(1){
     position: absolute;
-    top: 26%;
+    top: 29%;
     left: 92%;
     width: 9%;
     filter: blur(2px);
@@ -937,17 +997,17 @@ h2{
     left: 105%;
     width: 3%;
     filter: blur(1px);
-    height: 57%;
+    height: 62%;
     background-color: #ff4242;
     transform: rotate(-40deg);
 }
 
 .bras_top > div:nth-child(3){
     position: absolute;
-    top: 66%;
-    left: 109%;
+    top: 76%;
+    left: 112%;
     width: 15%;
-    filter: blur(3px);
+    filter: blur(2px);
     height: 8%;
     background-color: #ff4242;
     transform: rotate(-40deg);
@@ -984,10 +1044,11 @@ h2{
 
 .bras_bot{
     position: absolute;
-    bottom: 8%;
+    bottom: 10%;
     left: 19%;
     width: 17%;
     height: auto;
+    display: flex;
 }
 
 .plateau{
@@ -995,19 +1056,13 @@ h2{
     bottom: 0%;
     left: 10%;
     width: 80%;
-    height: auto;
+    display: flex;
 }
 
 /* animation menuserie */
-.menuserie{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
 .scie{
     position: absolute;
-    bottom: 13%;
+    bottom: 11%;
     left: 24%;
     width: 50%;
     height: 50%;
@@ -1028,18 +1083,13 @@ h2{
 }
 
 /* animation balon */
-.basket{
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
 .balon{
     position: absolute;
-    bottom: 60%;
+    bottom: 40%;
     left: 50%;
     width: 33%;
     height: 82%;
+    display: flex;
     transform: translateX(-50%);
     animation: balon 2s cubic-bezier(0.77, 0.06, 0.34, 1.03) infinite;
 }
@@ -1052,7 +1102,7 @@ h2{
 @keyframes balon{
     0%{
         height: 82%;
-        bottom: 60%;
+        bottom: 40%;
         width: 33%;
     }
     30%{
@@ -1062,7 +1112,7 @@ h2{
     50%{
         height: 70%;
         width: 40%;
-        bottom: -10%;
+        bottom: -16%;
     }
     75%{
         height: 90%;
@@ -1074,7 +1124,7 @@ h2{
     }
     100%{
         height: 82%;
-        bottom: 60%;
+        bottom: 40%;
         width: 33%;
     }
 }
@@ -1330,7 +1380,7 @@ p{
         
     }
     to{
-        top: -5000px;
+        top: -150em;
     }
 }
 
@@ -1342,7 +1392,7 @@ p{
         opacity: 0;
     }
     100%{
-        top: -5000px;
+        top: -150em;
         opacity: 0;
     }
 }

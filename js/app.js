@@ -10,10 +10,12 @@ const about = document.querySelector('.about')
 const body = document.querySelector('.new-body')
 const paper = document.querySelector('.place_paper')
 const glass = document.querySelector('.glass')
+const about_me = document.querySelector('.about_me')
 
-let tot = 1;
-let i = 0;
-let width;
+let tot = 1
+let i = 0
+let width
+let lastY
 
 // __________________________Mouving light first page______________________
 document.addEventListener("mousemove", (e) => {
@@ -73,6 +75,26 @@ window.addEventListener('mousewheel', (e) => {
     console.log(tot)
 })
 
+window.addEventListener('touchmove', (e) => {
+
+    let i = e.touches[0].clientY;
+    let currentY = Math.round(i / 100) * 100
+
+    if(tot === 11){
+        tot = 11
+    }
+    else if(tot <= 2 && currentY > lastY){
+        tot++
+        animate(tot)
+    }else if(tot >= 2 && currentY < lastY){
+        tot--
+        animate(tot)
+    }
+    lastY = currentY;
+
+    console.log(currentY)
+})
+
 
 // _____________________________function animation pages________________________
 function animate(t) {
@@ -107,6 +129,7 @@ function animate(t) {
         box_doc.classList.remove("right_back")
         shadow.classList.remove("doc_back")
         about.classList.remove("ani_about")
+        about_me.classList.remove("look")
         
         pageTwo.classList.add("openCross")
         portfolio.classList.add("P_folio_back")
@@ -132,6 +155,7 @@ function animate(t) {
         big_lamp.classList.add("left_back")
         box_doc.classList.add("right_back")
         about.classList.add("ani_about")
+        about_me.classList.add("look")
     }
 }
 
