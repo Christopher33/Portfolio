@@ -62,8 +62,7 @@ function closePaper() {
 }
 
 // ___________________________________counting page___________________________
-window.addEventListener('wheel' || 'touchmove', (e) => {
-
+window.addEventListener('wheel', (e) => {
     onScroll(e)
 })
 
@@ -85,9 +84,7 @@ function onScroll(e) {
             y = 1
         }        
         
-    } else {
-
-    }
+    } else { }
 }
 
 window.addEventListener('touchmove', (e) => {
@@ -111,9 +108,7 @@ window.addEventListener('touchmove', (e) => {
         }
         lastY = currentY;
 
-    } else {
-
-    }
+    } else { }
 
 })
 
