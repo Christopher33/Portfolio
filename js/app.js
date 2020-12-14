@@ -18,7 +18,6 @@ let width
 let lastY
 let y = 0
 
-
 // __________________________Mouving light first page______________________
 document.addEventListener("mousemove", (e) => {
     document.querySelectorAll('.lamp').forEach(parallax => {
@@ -33,7 +32,6 @@ document.addEventListener("mousemove", (e) => {
         parallax.style.transform = 'translate('+ h +'px, '+ v +'px)'
     })
 }, false);
-
 
 // _________________________Listener for responsive_________________________
 window.addEventListener('resize', (e) => {
@@ -109,77 +107,74 @@ window.addEventListener('touchmove', (e) => {
         lastY = currentY;
 
     } else { }
-
 })
 
 
 // _____________________________function animation pages________________________
+function animate(t) {
+    if(t == 1) {
 
-// setTimeout(
-    function animate(t) {
-        if(t == 1) {
-    
-            animations.forEach( (animation) => {
-                animation.classList.remove("up")
-                animation.classList.add("down")
-            })
-            pageTwo.classList.remove("openCross")
-            portfolio.classList.remove("P_folio_back")
-            big_lamp.classList.remove("left")
-            box_doc.classList.remove("right")
-            shadow.classList.remove("doc")
-            
-            pageOne.classList.add("openCross")
-            shadow.classList.add("doc_back")
-            big_lamp.classList.add("left_back")
-            box_doc.classList.add("right_back")    
-            portfolio.classList.add("P_folio")
-            
-        } else if(t == 2) {
-    
-            animations.forEach( (animation) => {
-                animation.classList.remove("down")
-                animation.classList.add("up")
-            })
-            pageOne.classList.remove("openCross")
-            pageThree.classList.remove("openCross")
-            portfolio.classList.remove("P_folio")
-            big_lamp.classList.remove("left_back")
-            box_doc.classList.remove("right_back")
-            shadow.classList.remove("doc_back")
-            about.classList.remove("ani_about")
-            about_me.classList.remove("look")
-            
-            pageTwo.classList.add("openCross")
-            portfolio.classList.add("P_folio_back")
-            big_lamp.classList.add("left")
-            box_doc.classList.add("right")
-            shadow.classList.add("doc")
-            
-            if( i >= 1 ) {
-                about.classList.add("ani_about_back")
-            }
-            i++;
-            
-        } else if(t ==3) {
-            
-            pageTwo.classList.remove("openCross")
-            big_lamp.classList.remove("left")
-            box_doc.classList.remove("right")
-            shadow.classList.remove("doc")
-            about.classList.remove("ani_about_back")
-            
-            pageThree.classList.add("openCross")
-            shadow.classList.add("doc_back")
-            big_lamp.classList.add("left_back")
-            box_doc.classList.add("right_back")
-            about.classList.add("ani_about")
-            about_me.classList.add("look")
+        animations.forEach( (animation) => {
+            animation.classList.remove("up")
+            animation.classList.add("down")
+        })
+        pageTwo.classList.remove("openCross")
+        portfolio.classList.remove("P_folio_back")
+        big_lamp.classList.remove("left")
+        box_doc.classList.remove("right")
+        shadow.classList.remove("doc")
+        
+        pageOne.classList.add("openCross")
+        shadow.classList.add("doc_back")
+        big_lamp.classList.add("left_back")
+        box_doc.classList.add("right_back")    
+        portfolio.classList.add("P_folio")
+        
+    } else if(t == 2) {
+
+        animations.forEach( (animation) => {
+            animation.classList.remove("down")
+            animation.classList.add("up")
+        })
+        pageOne.classList.remove("openCross")
+        pageThree.classList.remove("openCross")
+        portfolio.classList.remove("P_folio")
+        big_lamp.classList.remove("left_back")
+        box_doc.classList.remove("right_back")
+        shadow.classList.remove("doc_back")
+        about.classList.remove("ani_about")
+        about_me.classList.remove("look")
+        
+        pageTwo.classList.add("openCross")
+        portfolio.classList.add("P_folio_back")
+        big_lamp.classList.add("left")
+        box_doc.classList.add("right")
+        shadow.classList.add("doc")
+        
+        if( i >= 1 ) {
+            about.classList.add("ani_about_back")
         }
-
-        setTimeout( () => {
-            y = 0
-        }, 1000)
+        i++;
+        
+    } else if(t ==3) {
+        
+        pageTwo.classList.remove("openCross")
+        big_lamp.classList.remove("left")
+        box_doc.classList.remove("right")
+        shadow.classList.remove("doc")
+        about.classList.remove("ani_about_back")
+        
+        pageThree.classList.add("openCross")
+        shadow.classList.add("doc_back")
+        big_lamp.classList.add("left_back")
+        box_doc.classList.add("right_back")
+        about.classList.add("ani_about")
+        about_me.classList.add("look")
     }
+
+    setTimeout( () => {
+        y = 0
+    }, 1000)
+}
 
 
