@@ -6,11 +6,14 @@ const animations = document.querySelectorAll('.lamp')
 const box_doc = document.querySelector('.box_doc')
 const big_lamp = document.querySelector('.big_lamp')
 const shadow = document.querySelector('.doc2')
-const about = document.querySelector('.about')
 const body = document.querySelector('.new-body')
 const paper = document.querySelector('.place_paper')
 const glass = document.querySelector('.glass')
-const about_me = document.querySelector('.about_me')
+const about = document.querySelector('.about')
+const panneau_lights = document.querySelectorAll('.panneau_light')
+const projo_lights = document.querySelectorAll('.projo_light')
+const projo_shadows = document.querySelectorAll('.projo_shadow') 
+const panneau_brights = document.querySelectorAll('.panneau_bright') 
 
 let tot = 1
 let i = 0
@@ -143,7 +146,18 @@ function animate(t) {
         box_doc.classList.remove("right_back")
         shadow.classList.remove("doc_back")
         about.classList.remove("ani_about")
-        about_me.classList.remove("look")
+        panneau_lights.forEach( (panneau_light) => {
+            panneau_light.classList.remove("p_light")
+        })
+        projo_lights.forEach( (projo_light) => {
+            projo_light.classList.remove("pj_light")
+        })
+        projo_shadows.forEach( (projo_shadow) => {
+            projo_shadow.classList.remove("pj_shadow")
+        })
+        panneau_brights.forEach( (panneau_bright) => {
+            panneau_bright.classList.remove("p_bright")
+        })
         
         pageTwo.classList.add("openCross")
         portfolio.classList.add("P_folio_back")
@@ -169,7 +183,18 @@ function animate(t) {
         big_lamp.classList.add("left_back")
         box_doc.classList.add("right_back")
         about.classList.add("ani_about")
-        about_me.classList.add("look")
+        panneau_lights.forEach( (panneau_light) => {
+            panneau_light.classList.add("p_light")
+        })
+        projo_lights.forEach( (projo_light) => {
+            projo_light.classList.add("pj_light")
+        })
+        projo_shadows.forEach( (projo_shadow) => {
+            projo_shadow.classList.add("pj_shadow")
+        })
+        panneau_brights.forEach( (panneau_bright) => {
+            panneau_bright.classList.add("p_bright")
+        })
     }
 
     setTimeout( () => {
