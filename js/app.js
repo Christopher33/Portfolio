@@ -112,7 +112,6 @@ window.addEventListener('touchmove', (e) => {
     } else { }
 })
 
-
 // _____________________________function animation pages________________________
 function animate(t) {
     if(t == 1) {
